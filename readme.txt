@@ -1,8 +1,8 @@
 This project is use for collecting report from GITLAB API
-To get the report we will be using Python 3 Script, report.py.
+To get the report we will be using Python 3 Script, reportmain.py.
 To run the script, make sure your machine has Python 3 installed.
 
-Use command line: 	python3 report.py [-options,--long-options] (Pick below)
+Use command line: 	python3 reportmain.py [-options,--long-options] (Pick below)
 					   -h,--help (To get options help on terminal)
 					   -m,--mock (To run mock test)
 					   -l,--live (To run live test)
