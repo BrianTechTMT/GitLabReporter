@@ -158,7 +158,7 @@ class GitLabReportMock(GitLabReport):
         projects_url_paths = []
 
         for project in projects_infos:
-            projects_url_paths.append(os.getcwd()+"/{id}/".format(id=project[0]))
+            projects_url_paths.append(os.getcwd()+"/projects/{id}/".format(id=project[0]))
         return projects_url_paths
 
     def url_request(self, url):  # Child
