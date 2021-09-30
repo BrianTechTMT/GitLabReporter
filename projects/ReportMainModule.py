@@ -10,8 +10,8 @@ class GitLabReport:
     # Constants
     STATUS_LIST = ["success", "failed", "manual", "skipped", "cancelled"]
     PROJECT_JSON_PATH = "/../config/projects.json"
-    BASE_URL = "http://localhost:8000/PycharmProjects/pythonProject5"
-    # BASE_URL = "https://gitlab.com/api/v4"
+    # BASE_URL = "http://localhost:8000/PycharmProjects/pythonProject5"
+    BASE_URL = "https://gitlab.com/api/v4"
     TOKEN_FILE_PATH = "/../etc/default/telegraf"
     LAST_RUN_FILE = "/var/tmp/tmp_pipeline_ids"
     MATCH_STATUS_TAGS = ["ref", "sha", "id", "web_url", "created_at", "source", "name", "build_ids"]
