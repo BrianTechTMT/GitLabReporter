@@ -58,7 +58,11 @@ class GitLabReport:
         Use for each time the script ask for json string from server
         """
         live_token = GitLabReport.get_live_token(self)
-        json_response = requests.get(url, headers={"PRIVATE-TOKEN": live_token})
+        try:
+            json_response = requests.get(url, headers={"PRIVATE-TOKEN": live_token})
+        except (requests.exceptions.ConnectionError, requests.exceptions.HTTPError) as error:
+            raise SystemExit(error)
+
         return json_response
 
     def get_pipe_ids(self, url):
