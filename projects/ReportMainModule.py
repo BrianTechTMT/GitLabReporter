@@ -10,8 +10,8 @@ class GitLabReport:
     # Constants
     STATUS_LIST = ["success", "failed", "manual", "skipped", "cancelled"]
     PROJECT_JSON_PATH = "/../config/projects.json"
-    BASE_URL = "https://gitlab.com/api/v4"
-    TOKEN_FILE_PATH = "/etc/default/telegraf"
+    BASE_URL = "http://localhost:8000/PycharmProjects/pythonProject7/"
+    TOKEN_FILE_PATH = "/../etc/default/telegraf"
     LAST_RUN_FILE = "/var/tmp/tmp_pipeline_ids"
     MATCH_STATUS_TAGS = ["ref", "sha", "id", "web_url", "created_at", "source", "name", "build_ids"]
     REPORT_TAGS = ["name", "total_time", "total_count", "success_count", "failed_count", "skipped_count",
@@ -42,7 +42,7 @@ class GitLabReport:
         """
         Get Live Test Token
         """
-        token_file = open(self.TOKEN_FILE_PATH, "r")
+        token_file = open(os.getcwd() + self.TOKEN_FILE_PATH, "r")
         keyword = "GITLAB_API_SECRET"
         for tokens in token_file:
             token = tokens.split("\n")

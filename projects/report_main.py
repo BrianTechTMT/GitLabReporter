@@ -1,7 +1,7 @@
 import getopt
 import sys
-import reportlive
-import reportmock
+import report_live
+import report_mock
 
 
 # Get full command-line arguments
@@ -23,9 +23,9 @@ if __name__ == '__main__':
                 print("Options:\t-m,--mock\t Mock Test\n"
                       "\t\t-l,--live\t Live Test")
             elif current_argument in ("-m", "--mock"):
-                reportmock.run()
+                report_mock.run()
             elif current_argument in ("-l", "--live"):
-                reportlive.run()
+                report_live.run()
 
 
     except getopt.error as err:
